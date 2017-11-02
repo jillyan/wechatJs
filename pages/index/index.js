@@ -25,9 +25,12 @@ Page({
   },
     applyOff: function (op) {
     wx.request({
-      url: 'http://localhost:8080/yoga/hello',
-      method: 'get',
-      header: { 'Content-Type': 'application/json' },
+      url: 'http://localhost:8080/yoga/applyOff',
+      data: {
+        wechatNickname:this.data.userInfo.nickName
+      },
+      method: 'post',
+      header: { 'Content-Type': 'application/x-www-form-urlencoded' },
       success: function (res) {
         console.log('success:'+res)
       },
