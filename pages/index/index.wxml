@@ -3,18 +3,18 @@
   <view class="userinfo">
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover" bindtap="bindViewTap"></image>      
    <view class="section">   
-    <view class='section-title'>我是:</view>    
+    <view class='section-title inline-label'>我是:</view>    
     <input value='{{name}}' bindinput ="bindNameChange" class='value'></input>    
   </view>
   <view>
-   <picker mode="date" value="{{offDate}}"  bindchange="bindDateChange">
-      <label class='section-title'>请假日期:</label>
-      <view class="value">
+   <label class='section-title inline-label'>请假日期:</label>
+   <picker class="value" mode="date" value="{{offDate}}"  bindchange="bindDateChange">   
+      <view  style='padding-right:10px;'>
          {{offDate}}
       </view>
     </picker>
   </view>
-    <button bindtap='applyOff'>提交</button>
+    <button bindtap='applyOff' class='submit-button'>提交</button>
   </view>
  
 </view>

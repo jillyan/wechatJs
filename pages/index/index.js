@@ -19,7 +19,8 @@ Page({
     app.getUserInfo(function(userInfo){
       //更新数据
       const today = new Date();
-      const todayStr = today.getFullYear() + '-'+(today.getMonth() + 1)+'-'+ today.getDay();
+      const day = today.getDay() < 10 ? '0' + today.getDay() :today.getDay();
+      const todayStr = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + day;
       that.setData({
         userInfo:userInfo,
         name: userInfo.nickName,
