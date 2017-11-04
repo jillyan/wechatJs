@@ -12,10 +12,21 @@
   border-radius: 50%;
 }
 
-.userinfo-nickname {
+
+.section-title {
   color: #aaa;
 }
-
+.value {
+  display: inline-block;
+  border-bottom: 1px solid lightblue;
+}
 .usermotto {
-  margin-top: 200px;
+  margin-top: 30px;
+}
+
+.section {
+  display: inline-block;  
+  margin-top:5px;
+  margin-bottom: 5px;
+  font-size: 15px;
 }
